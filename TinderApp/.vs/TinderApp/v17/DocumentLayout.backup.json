@@ -1,0 +1,264 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\turis\\Desktop\\TinderApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|c:\\users\\turis\\desktop\\tinderapp\\viewmodels\\usuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|solutionrelative:viewmodels\\usuarioviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|c:\\users\\turis\\desktop\\tinderapp\\viewmodels\\matchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|solutionrelative:viewmodels\\matchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|c:\\users\\turis\\desktop\\tinderapp\\utilidades\\usuariomensaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|solutionrelative:utilidades\\usuariomensaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|c:\\users\\turis\\desktop\\tinderapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|c:\\users\\turis\\desktop\\tinderapp\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|c:\\users\\turis\\desktop\\tinderapp\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|c:\\users\\turis\\desktop\\tinderapp\\utilidades\\matchmensaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|solutionrelative:utilidades\\matchmensaje.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|c:\\users\\turis\\desktop\\tinderapp\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|solutionrelative:dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|c:\\users\\turis\\desktop\\tinderapp\\models\\tinderdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|solutionrelative:models\\tinderdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|c:\\users\\turis\\desktop\\tinderapp\\models\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|solutionrelative:models\\match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|c:\\users\\turis\\desktop\\tinderapp\\dtos\\matchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|solutionrelative:dtos\\matchdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|c:\\users\\turis\\desktop\\tinderapp\\tinderapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{53B932E7-084B-4995-94A7-841F6F12FEA8}|TinderApp.csproj|solutionrelative:tinderapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 238,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsuarioViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\turis\\Desktop\\TinderApp\\ViewModels\\UsuarioViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\UsuarioViewModel.cs",
+              "ToolTip": "C:\\Users\\turis\\Desktop\\TinderApp\\ViewModels\\UsuarioViewModel.cs",
+              "RelativeToolTip": "ViewModels\\UsuarioViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T11:30:38.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioMensaje.cs",
+              "DocumentMoniker": "C:\\Users\\turis\\Desktop\\TinderApp\\Utilidades\\UsuarioMensaje.cs",
+              "RelativeDocumentMoniker": "Utilidades\\UsuarioMensaje.cs",
+              "ToolTip": "C:\\Users\\turis\\Desktop\\TinderApp\\Utilidades\\UsuarioMensaje.cs",
+              "RelativeToolTip": "Utilidades\\UsuarioMensaje.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T11:28:30.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MatchViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\turis\\Desktop\\TinderApp\\ViewModels\\MatchViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MatchViewModel.cs",
+              "ToolTip": "C:\\Users\\turis\\Desktop\\TinderApp\\ViewModels\\MatchViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MatchViewModel.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAowAsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T11:41:57.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\turis\\Desktop\\TinderApp\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\turis\\Desktop\\TinderApp\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T11:31:02.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\turis\\Desktop\\TinderApp\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\turis\\Desktop\\TinderApp\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T11:19:18.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\turis\\Desktop\\TinderApp\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\turis\\Desktop\\TinderApp\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAcwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T11:31:33.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MatchMensaje.cs",
+              "DocumentMoniker": "C:\\Users\\turis\\Desktop\\TinderApp\\Utilidades\\MatchMensaje.cs",
+              "RelativeDocumentMoniker": "Utilidades\\MatchMensaje.cs",
+              "ToolTip": "C:\\Users\\turis\\Desktop\\TinderApp\\Utilidades\\MatchMensaje.cs",
+              "RelativeToolTip": "Utilidades\\MatchMensaje.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T11:24:20.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\turis\\Desktop\\TinderApp\\DTOs\\UsuarioDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\UsuarioDTO.cs",
+              "ToolTip": "C:\\Users\\turis\\Desktop\\TinderApp\\DTOs\\UsuarioDTO.cs",
+              "RelativeToolTip": "DTOs\\UsuarioDTO.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T11:22:22.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Match.cs",
+              "DocumentMoniker": "C:\\Users\\turis\\Desktop\\TinderApp\\Models\\Match.cs",
+              "RelativeDocumentMoniker": "Models\\Match.cs",
+              "ToolTip": "C:\\Users\\turis\\Desktop\\TinderApp\\Models\\Match.cs",
+              "RelativeToolTip": "Models\\Match.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T11:19:47.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TinderDB.cs",
+              "DocumentMoniker": "C:\\Users\\turis\\Desktop\\TinderApp\\Models\\TinderDB.cs",
+              "RelativeDocumentMoniker": "Models\\TinderDB.cs",
+              "ToolTip": "C:\\Users\\turis\\Desktop\\TinderApp\\Models\\TinderDB.cs",
+              "RelativeToolTip": "Models\\TinderDB.cs",
+              "ViewState": "AgIAAPcAAAAAAAAAAAAYwAYBAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T11:16:48.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MatchDTO.cs",
+              "DocumentMoniker": "C:\\Users\\turis\\Desktop\\TinderApp\\DTOs\\MatchDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\MatchDTO.cs",
+              "ToolTip": "C:\\Users\\turis\\Desktop\\TinderApp\\DTOs\\MatchDTO.cs",
+              "RelativeToolTip": "DTOs\\MatchDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T11:21:29.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TinderApp",
+              "DocumentMoniker": "C:\\Users\\turis\\Desktop\\TinderApp\\TinderApp.csproj",
+              "RelativeDocumentMoniker": "TinderApp.csproj",
+              "ToolTip": "C:\\Users\\turis\\Desktop\\TinderApp\\TinderApp.csproj",
+              "RelativeToolTip": "TinderApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-13T11:12:13.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3822e751-eb69-4b0e-b301-595a9e4c74d5}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
