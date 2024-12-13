@@ -1,1 +1,1 @@
-C:\Users\turis\Desktop\ProyectoTinder\TinderApp\TinderApp.csproj;x64
+C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\TinderApp.csproj;x64

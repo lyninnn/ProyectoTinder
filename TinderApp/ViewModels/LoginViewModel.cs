@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using TinderApp.Models;
-
+using TinderApp.Views;
 namespace TinderApp.ViewModels
 {
     public partial class LoginViewModel : ObservableObject

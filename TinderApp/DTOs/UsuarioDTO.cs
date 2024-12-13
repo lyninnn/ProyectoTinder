@@ -17,19 +17,19 @@ namespace TinderApp.DTOs
         private string nombre;
 
         [ObservableProperty]
-        private int edad;
+        private int? edad;
 
         [ObservableProperty]
-        private string genero;
+        private string? genero;
 
         [ObservableProperty]
-        private string ubicacion;
+        private string? ubicacion;
 
         [ObservableProperty]
-        private string preferencias;
+        private string? preferencias;
 
         [ObservableProperty]
-        private string foto;
+        private string? foto;
 
         [ObservableProperty]
         private string contraseña;

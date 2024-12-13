@@ -20,7 +20,7 @@
             <Entry Placeholder="Edad" Keyboard="Numeric" Text="{Binding UsuarioDTO.Edad}" />
 
             <Label Text="Genero del Usuario"/>
-            <Picker ItemsSource="{Binding UsuarioDTO.Genero}" />
+            <Entry Placeholder="Genero" Text="{Binding UsuarioDTO.Genero}" />
 
             <Label Text="Ubicacion del Usuario"/>
             <Entry Placeholder="Ubicación" Text="{Binding UsuarioDTO.Ubicacion}" />

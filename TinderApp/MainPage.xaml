@@ -8,7 +8,11 @@
             x:DataType="viewmodel:MainViewModel">
 
     <Grid RowDefinitions="Auto, *" RowSpacing="15" Margin="15">
+
+        <Button Grid.Row="0" Text="Nuevo Usuario" Command="{Binding CrearUsuarioCommand}"/>
+        <Button Grid.Row="0" Text="Ver matches" Command="{Binding VerMatchesCommand}"/>
         <!-- RefreshView para cargar la lista de usuarios -->
+        <ScrollView Grid.Row="2">
         <RefreshView Command="{Binding CargarListaUsuariosCommand}"
                      IsRefreshing="{Binding IsRefreshing}">
             <CollectionView ItemsSource="{Binding ListaUsuarios}">
@@ -51,25 +55,25 @@
                                 <!-- Botones de acciones -->
                                 <Grid Grid.Row="5" Grid.ColumnSpan="2" ColumnDefinitions="*, *, *" Padding="0, 10, 0, 0">
                                     <!-- Dar Like -->
-                                    <Label Grid.Column="0" Text="Dar Like" HorizontalTextAlignment="Center">
+                                    <Label Grid.Column="2" Text="Dar Like" HorizontalTextAlignment="Center">
                                         <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding BindingContext.DarLikeAsyncCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" 
+                                                <TapGestureRecognizer Command="{Binding BindingContext.DarLikeAsyncCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" 
                                                                CommandParameter="{Binding}" />
                                         </Label.GestureRecognizers>
                                     </Label>
 
                                     <!-- Eliminar -->
-                                    <Label Grid.Column="1" Text="Eliminar" HorizontalTextAlignment="Center">
+                                    <Label Grid.Column="0" Text="Eliminar" HorizontalTextAlignment="Center">
                                         <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding BindingContext.EliminarCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" 
+                                            <TapGestureRecognizer Command="{Binding BindingContext.EliminarUsuarioCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" 
                                                                CommandParameter="{Binding}" />
                                         </Label.GestureRecognizers>
                                     </Label>
 
                                     <!-- Editar -->
-                                    <Label Grid.Column="2" Text="Editar" HorizontalTextAlignment="Center">
+                                    <Label Grid.Column="1" Text="Editar" HorizontalTextAlignment="Center">
                                         <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding BindingContext.EditarCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" 
+                                            <TapGestureRecognizer Command="{Binding BindingContext.EditarUsuarioCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" 
                                                                CommandParameter="{Binding}" />
                                         </Label.GestureRecognizers>
                                     </Label>
@@ -80,6 +84,7 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </RefreshView>
+        </ScrollView>
     </Grid>
 
 </ContentPage>

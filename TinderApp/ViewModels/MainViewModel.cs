@@ -22,6 +22,9 @@ namespace TinderApp.ViewModels
         private ObservableCollection<UsuarioDTO> listaUsuarios;
 
         [ObservableProperty]
+        private UsuarioDTO usuarioDTOactual;
+
+        [ObservableProperty]
         private bool isRefreshing;
 
         [ObservableProperty]
@@ -98,7 +101,7 @@ namespace TinderApp.ViewModels
                 return;
             }
 
-            await Shell.Current.GoToAsync($"UsuarioPage?id={usuario.User_id}");
+            await Shell.Current.GoToAsync($"UsuarioPage?idUsuario={usuario.User_id}");
 
         }
 
@@ -119,10 +122,89 @@ namespace TinderApp.ViewModels
             }
 
         }
+        [RelayCommand]
+        private async Task VerMatches()
+        {
+            await Shell.Current.GoToAsync("MatchPage");
+        }
 
-       
 
-        
+        [RelayCommand]
+        public async Task DarLikeAsync(UsuarioDTO usuarioLikeado)
+        {
+            await Shell.Current.DisplayAlert("hola","ok","ok");
+            if (usuarioLikeado == null)
+            {
+                await Shell.Current.DisplayAlert("Advertencia", "El usuario seleccionado no es válido.", "OK");
+                return;
+            }
+
+            try
+            {
+                int usuarioActualId = UsuarioDTOactual.User_id; // Asume que tienes el ID del usuario actual disponible
+
+                // Verificar si ya se dio un like previamente
+                if (await VerificarLike(usuarioActualId, usuarioLikeado.User_id))
+                {
+                    await Shell.Current.DisplayAlert(
+                        "Like ya enviado",
+                        $"Ya has dado like a {usuarioLikeado.Nombre}.",
+                        "OK"
+                    );
+                    return;
+                }
+
+                // Insertar el "like" en la base de datos
+                var nuevoMatch = new Match
+                {
+                    Usuario1Id = usuarioActualId,
+                    Usuario2Id = usuarioLikeado.User_id,
+                    FechaMatch = Convert.ToString(DateTime.Now)
+                };
+                await tinderDB.InsertarMatch(nuevoMatch);
+
+                // Comprobar si existe un match mutuo
+                if (await EsMatchMutuo(usuarioActualId, usuarioLikeado.User_id))
+                {
+                    await Shell.Current.DisplayAlert(
+                        "¡Match logrado!",
+                        $"¡Tienes un match con {usuarioLikeado.Nombre}! Ahora pueden comenzar a chatear.",
+                        "OK"
+                    );
+                }
+                else
+                {
+                    await Shell.Current.DisplayAlert(
+                        "¡Like enviado!",
+                        $"Has dado like a {usuarioLikeado.Nombre}.",
+                        "OK"
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", $"Hubo un problema al dar like: {ex.Message}", "OK");
+            }
+        }
+
+
+        public async Task<bool> VerificarLike(int usuario1Id, int usuario2Id)
+        {
+            var likes = await tinderDB.VerMatch(); // Obtén todos los matches de la base de datos
+            return likes.Any(m => m.Usuario1Id == usuario1Id && m.Usuario2Id == usuario2Id);
+        }
+        public async Task<bool> EsMatchMutuo(int usuario1Id, int usuario2Id)
+        {
+            var matches = await tinderDB.VerMatch(); // Obtén todos los matches de la base de datos
+            return matches.Any(m =>
+                (m.Usuario1Id == usuario1Id && m.Usuario2Id == usuario2Id) ||
+                (m.Usuario2Id == usuario1Id && m.Usuario1Id == usuario2Id)
+            );
+        }
+
+
+
+
 
 
     }

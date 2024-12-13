@@ -35,7 +35,7 @@ namespace TinderApp.Models
                 //string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
                 // Construye la ruta absoluta desde el directorio base
-                dbpath = "C:\\Users\\turis\\Desktop\\tinderapp\\TinderApp\\TinderApp\\TinderApp\\TinderDB\\TinderAPP.db";
+                dbpath = "C:\\Users\\2DAM\\Desktop\\ProyectoTinder\\TinderApp\\TinderDB\\TinderAPP.db";
             }
             else
             {
@@ -116,13 +116,14 @@ namespace TinderApp.Models
 
                 await connection.OpenAsync();
                 var updateCommand = connection.CreateCommand();
-                updateCommand.CommandText = @"UPDATE Usuario SET nombre = @NOMBRE, edad = @edad, genero = @genero, ubicacion = @ubicacion, preferencias = @preferencias,foto = @foto where id = @id)";
+                updateCommand.CommandText = @"UPDATE Usuario SET nombre = @nombre, edad = @edad, genero = @genero, ubicacion = @ubicacion, preferencias = @preferencias,foto = @foto,Contraseña = @contraseña where id = @id";
                 updateCommand.Parameters.AddWithValue("@nombre", usuario.Nombre);
                 updateCommand.Parameters.AddWithValue("@edad", usuario.Edad);
                 updateCommand.Parameters.AddWithValue("@genero", usuario.Genero);
                 updateCommand.Parameters.AddWithValue("@ubicacion", usuario.Ubicacion);
                 updateCommand.Parameters.AddWithValue("@preferencias", usuario.Preferencias);
                 updateCommand.Parameters.AddWithValue("@foto", usuario.Foto);
+                updateCommand.Parameters.AddWithValue("@contraseña", usuario.Contraseña);
                 updateCommand.Parameters.AddWithValue("@id", usuario.UsuarioId);
                 row =await updateCommand.ExecuteNonQueryAsync();
 
@@ -140,7 +141,7 @@ namespace TinderApp.Models
 
                 await connection.OpenAsync();
                 var deleteCommand = connection.CreateCommand();
-                deleteCommand.CommandText = @"DELETE FROM Usuario where id = @id)";
+                deleteCommand.CommandText = @"DELETE FROM Usuario where id = @id";
                 deleteCommand.Parameters.AddWithValue("@id", id);
                 await deleteCommand.ExecuteNonQueryAsync();
 

@@ -11,6 +11,8 @@ using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using Microsoft.Extensions.Logging;
 using TinderApp.Utilidades;
+using Microsoft.Maui.Storage;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace TinderApp.ViewModels
 {
@@ -45,14 +47,18 @@ namespace TinderApp.ViewModels
         public async Task Guardar()
         {
 
-            if (string.IsNullOrWhiteSpace(UsuarioDTO.Nombre) ||
+            if (
+                string.IsNullOrWhiteSpace(UsuarioDTO.Nombre) ||
                 UsuarioDTO.Edad <= 0 ||
                 string.IsNullOrWhiteSpace(UsuarioDTO.Genero) ||
                 string.IsNullOrWhiteSpace(UsuarioDTO.Ubicacion) ||
                 string.IsNullOrWhiteSpace(UsuarioDTO.Preferencias) ||
-                string.IsNullOrWhiteSpace(UsuarioDTO.Contraseña))
+                string.IsNullOrWhiteSpace(UsuarioDTO.Contraseña)||
+                     string.IsNullOrWhiteSpace(UsuarioDTO.Foto))
+                  
             {
                 await Shell.Current.DisplayAlert("Error", "No has introducido los valores correctamente", "OK");
+                return;
              
             }
 
@@ -94,7 +100,7 @@ namespace TinderApp.ViewModels
                 WeakReferenceMessenger.Default.Send(new UsuarioMensaje(UsuarioDTO)); //Se envía al MainViewModel que hay un evento que ha sido modificado.
 
                 await Shell.Current.DisplayAlert("Éxito", "Todo bien!", "OK");
-                await Shell.Current.GoToAsync(".."); //Vuelve al padre (MainPage)
+                await Shell.Current.GoToAsync("MainPage"); //Vuelve al padre (MainPage)
 
             }
             else
