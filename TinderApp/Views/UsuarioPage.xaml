@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:TinderApp.ViewModels"
+             xmlns:model="clr-namespace:TinderApp.Views"
+             x:Class="TinderApp.Views.UsuarioPage"
+             Title="{Binding Titulo}"
+             x:DataType="viewmodel:UsuarioViewModel">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <Label Text="Nombre de Usuario"/>
+            <Entry Placeholder="Nombre" Text="{Binding UsuarioDTO.Nombre}" />
+
+            <Label Text="Contraseña"/>
+            <Entry Placeholder="Contraseña" IsPassword="True" Text="{Binding UsuarioDTO.Contraseña}"/>
+
+            <Label Text="Edad del Usuario"/>
+            <Entry Placeholder="Edad" Keyboard="Numeric" Text="{Binding UsuarioDTO.Edad}" />
+
+            <Label Text="Genero del Usuario"/>
+            <Picker ItemsSource="{Binding UsuarioDTO.Genero}" />
+
+            <Label Text="Ubicacion del Usuario"/>
+            <Entry Placeholder="Ubicación" Text="{Binding UsuarioDTO.Ubicacion}" />
+
+            <Label Text="Preferencias del Usuario"/>
+            <Entry Placeholder="Preferencias" Text="{Binding UsuarioDTO.Preferencias}" />
+
+            <Label Text="Foto del Usuario"/>
+            <Image Source="{Binding UsuarioDTO.Foto}" HeightRequest="150" />
+            <Button Text="Seleccionar Foto" Command="{Binding SeleccionarFotoCommand}" />
+
+            <Button Text="Guardar" Command="{Binding GuardarCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>

@@ -6,6 +6,17 @@
     <ActiveDebugProfile>Windows Machine</ActiveDebugProfile>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="Views\LoginPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\MatchPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\UsuarioPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+  </ItemGroup>
+  <ItemGroup>
     <None Update="App.xaml">
       <SubType>Designer</SubType>
     </None>

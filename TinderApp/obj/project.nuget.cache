@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2S0UxKU5EAo=",
+  "dgSpecHash": "siAjNxBtPQs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\turis\\Desktop\\TinderApp\\TinderApp.csproj",
+  "projectFilePath": "C:\\Users\\turis\\Desktop\\ProyectoTinder\\TinderApp\\TinderApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\turis\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "C:\\Users\\turis\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",

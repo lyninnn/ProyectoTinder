@@ -13,7 +13,7 @@ using TinderApp.Utilidades;
 
 namespace TinderApp.ViewModels
 {
-    [QueryProperty(namespace(MatchId)),"id"]
+    [QueryProperty(nameof(MatchId),"idMatch")]
     public partial class MatchViewModel : ObservableObject, IRecipient<MatchMensaje>
     {
         private readonly TinderDB tinderDB;
@@ -26,6 +26,9 @@ namespace TinderApp.ViewModels
 
         [ObservableProperty]
         private bool isBusy;
+
+        [ObservableProperty]
+        private int matchId;
 
         public MatchViewModel(TinderDB tinderDB)
         {
@@ -51,12 +54,12 @@ namespace TinderApp.ViewModels
             IsBusy = true;
             IsRefreshing = true;
 
-            List<Match> listMatch = await tinderDB.VerMatch();
+            List<Match> listaMatch = await tinderDB.VerMatch();
             MainThread.BeginInvokeOnMainThread(() =>
             {
 
                 ListaMatchs.Clear();
-                foreach (Match match in listMatch)
+                foreach (Match match in listaMatch)
                 {
                     ListaMatchs.Add(new MatchDTO
                     {
@@ -85,17 +88,17 @@ namespace TinderApp.ViewModels
             await Shell.Current.GoToAsync("MatchPage");
         }
 
-        [RelayCommand]
-        private async Task EditarMath(MatchDTO match)
-        {
-            if (match == null)
-            {
-                return;
-            }
+        //[RelayCommand]
+        //private async Task EditarMath(MatchDTO match)
+        //{
+        //    if (match == null)
+        //    {
+        //        return;
+        //    }
 
-            await Shell.Current.GoToAsync($"MatchPage?id={match.MatchId}");
+        //    await Shell.Current.GoToAsync($"MatchPage?id={match.MatchId}");
 
-        }
+        //}
 
 
 

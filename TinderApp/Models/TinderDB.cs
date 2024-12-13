@@ -107,8 +107,9 @@ namespace TinderApp.Models
         }
 
 
-        public async Task ActualizarUsuario(Usuario usuario)
+        public async Task<int> ActualizarUsuario(Usuario usuario)
         {
+            int row = 0;
 
             using (var connection = new SqliteConnection(cadenaConexion))
             {
@@ -123,9 +124,10 @@ namespace TinderApp.Models
                 updateCommand.Parameters.AddWithValue("@preferencias", usuario.Preferencias);
                 updateCommand.Parameters.AddWithValue("@foto", usuario.Foto);
                 updateCommand.Parameters.AddWithValue("@id", usuario.UsuarioId);
-                await updateCommand.ExecuteNonQueryAsync();
+                row =await updateCommand.ExecuteNonQueryAsync();
 
             }
+            return row;
 
         }
 
