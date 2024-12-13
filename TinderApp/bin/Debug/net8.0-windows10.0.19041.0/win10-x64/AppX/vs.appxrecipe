@@ -30,7 +30,7 @@
     <AppXManifest Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-13T17:58:46.778</Modified>
+      <Modified>2024-12-13T18:10:01.472</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TinderApp.dll">
       <PackagePath>TinderApp.dll</PackagePath>
-      <Modified>2024-12-13T17:58:46.372</Modified>
+      <Modified>2024-12-13T18:10:00.456</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>TinderApp.exe</PackagePath>
-      <Modified>2024-12-13T17:58:46.387</Modified>
+      <Modified>2024-12-13T18:10:00.472</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
