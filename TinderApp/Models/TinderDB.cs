@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.Data.Sqlite;
 using TinderApp.DTOs;
+using Windows.UI;
 
 namespace TinderApp.Models
 {
@@ -35,7 +36,7 @@ namespace TinderApp.Models
                 //string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
                 // Construye la ruta absoluta desde el directorio base
-                dbpath = "C:\\Users\\2DAM\\Desktop\\ProyectoTinder\\TinderApp\\TinderDB\\TinderAPP.db";
+                dbpath = "C:\\Users\\turis\\Desktop\\ProyectoTinder\\TinderApp\\TinderDB\\TinderAPP.db";
             }
             else
             {
@@ -183,23 +184,121 @@ namespace TinderApp.Models
             return usuarios;
         }
 
-        /* MATCHS */
+        // Like
 
-        public async Task<int> InsertarMatch(Match match)
+        public async Task<int> InsertarLike(Like like)
         {
             int row;
             using (var connection = new SqliteConnection(cadenaConexion))
             {
                 await connection.OpenAsync();
                 var insertCommand = connection.CreateCommand();
-                insertCommand.CommandText = @"INSERT INTO Match (user1_id, user2_id, fecha_match) values (@id1, @id2, @fecha)";
-                insertCommand.Parameters.AddWithValue("@id1", match.Usuario1Id);
-                insertCommand.Parameters.AddWithValue("@id2", match.Usuario2Id);
-                insertCommand.Parameters.AddWithValue("@fecha", match.FechaMatch);
+                insertCommand.CommandText = @"INSERT INTO Like (user1_id, user2_id, fecha_like) values (@id1, @id2, @fecha)";
+                insertCommand.Parameters.AddWithValue("@id1", like.id_user1);
+                insertCommand.Parameters.AddWithValue("@id2", like.id_user2);
+                insertCommand.Parameters.AddWithValue("@fecha", like.fechaLike);
                 row = await insertCommand.ExecuteNonQueryAsync();
             }
 
             return row;
+        }
+
+        public async Task EliminarLike(int id)
+        {
+
+            using (var connection = new SqliteConnection(cadenaConexion))
+            {
+
+                await connection.OpenAsync();
+                var deleteCommand = connection.CreateCommand();
+                deleteCommand.CommandText = @"DELETE FROM like where id_like = @id)";
+                deleteCommand.Parameters.AddWithValue("@id", id);
+                await deleteCommand.ExecuteNonQueryAsync();
+
+            }
+
+        }
+
+        public async Task<List<Like>> VerLike(int id)
+        {
+
+            List<Like> likes = new List<Like>();
+
+            using (var connection = new SqliteConnection(cadenaConexion))
+            {
+
+                await connection.OpenAsync();
+                var createCommand = connection.CreateCommand();
+                createCommand.CommandText = "SELECT * FROM Like where id_like = @id";
+                createCommand.Parameters.AddWithValue("@id",id);
+                using (var reader = await createCommand.ExecuteReaderAsync())
+                {
+
+                    while (await reader.ReadAsync())
+                    {
+
+                        likes.Add(new Like
+                        {
+                            id_like = reader.GetInt32(0),
+                            id_user1 = reader.GetInt32(1),
+                            id_user2 = reader.GetInt32(2),
+                            fechaLike = reader.GetString(3)
+
+                        });
+                    }
+                }
+            }
+            return likes;
+        }
+        public async Task<bool> ExisteLikeReciproco(int usuarioActualId, int usuarioLikeadoId)
+        {
+            using (var connection = new SqliteConnection(cadenaConexion))
+            {
+                await connection.OpenAsync();
+                var command = connection.CreateCommand();
+                command.CommandText = @"
+            SELECT COUNT(*) 
+            FROM Like 
+            WHERE (user1_id = @usuarioLikeadoId AND user2_id = @usuarioActualId)";
+                command.Parameters.AddWithValue("@usuarioLikeadoId", usuarioLikeadoId);
+                command.Parameters.AddWithValue("@usuarioActualId", usuarioActualId);
+
+                var result = await command.ExecuteScalarAsync();
+                return Convert.ToInt32(result) > 0;
+            }
+        }
+
+
+
+
+        /* MATCHS */
+
+        public async Task<int> InsertarMatch(Match match)
+        {
+            using (var connection = new SqliteConnection(cadenaConexion))
+            {
+                await connection.OpenAsync();
+
+                // Reutilizar método ExisteLikeReciproco para verificar Like recíproco
+                bool existeLikeReciproco = await ExisteLikeReciproco(match.Usuario1Id, match.Usuario2Id);
+
+                if (!existeLikeReciproco)
+                {
+                    // No hay Like recíproco, no se inserta el Match
+                    return 0;
+                }
+
+                // Insertar el Match
+                var insertCommand = connection.CreateCommand();
+                insertCommand.CommandText = @"
+            INSERT INTO Match (user1_id, user2_id, fecha_match) 
+            VALUES (@id1, @id2, @fecha)";
+                insertCommand.Parameters.AddWithValue("@id1", match.Usuario1Id);
+                insertCommand.Parameters.AddWithValue("@id2", match.Usuario2Id);
+                insertCommand.Parameters.AddWithValue("@fecha", match.FechaMatch);
+
+                return await insertCommand.ExecuteNonQueryAsync();
+            }
         }
 
 
@@ -268,6 +367,9 @@ namespace TinderApp.Models
             }
             return match;
         }
+
+
+
 
     }
 }

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:TinderApp.ViewModels"
+             xmlns:model="clr-namespace:TinderApp.DTOs"
+             x:Class="TinderApp.Views.LikePage"
+             Title="Likes"
+             x:DataType="viewmodel:LikeViewModel">
+    
+
+        <Grid RowDefinitions="Auto, *" RowSpacing="15" Margin="15">
+
+        <!-- Botón para volver al menú principal -->
+        <!--<Button Grid.Row="0" Text="Volver al Inicio" Command="{Binding VolverAlInicioCommand}"/>-->
+
+        <!-- RefreshView para cargar la lista de likes -->
+        <RefreshView Grid.Row="1"
+                     Command="{Binding CargarListaLikesCommand}"
+                     IsRefreshing="{Binding IsRefreshing}">
+            <CollectionView ItemsSource="{Binding ListaLikes}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="10" Orientation="Vertical"/>
+                </CollectionView.ItemsLayout>
+
+                <!-- Plantilla para cada like -->
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:LikeDTO">
+                        <Border Padding="10" HorizontalOptions="FillAndExpand">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="5"/>
+                            </Border.StrokeShape>
+
+                            <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, *">
+
+                                <!-- Nombre del usuario que dio like -->
+                                <Label Grid.Row="0" Grid.Column="0" Text="De:" FontAttributes="Bold"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Id_user1}"/>
+
+                                <!-- Nombre del usuario que recibió el like -->
+                                <Label Grid.Row="1" Grid.Column="0" Text="A:" FontAttributes="Bold"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Id_user2}"/>
+
+                                <!-- Fecha del like -->
+                                <Label Grid.Row="2" Grid.Column="0" Text="Fecha:" FontAttributes="Bold"/>
+                                <Label Grid.Row="2" Grid.Column="1" Text="{Binding FechaLike}"/>
+
+                                <!-- Botones de acciones -->
+                                <Grid Grid.Row="3" Grid.ColumnSpan="2" ColumnDefinitions="*, *">
+
+                    
+
+                                    <!-- Eliminar Like -->
+                                    <Label Grid.Column="1" Text="Eliminar" HorizontalTextAlignment="Center">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding BindingContext.EliminarLikeCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}"
+                                                                  CommandParameter="{Binding}"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </Grid>
+
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+
+    </Grid>
+
+</ContentPage>

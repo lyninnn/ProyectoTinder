@@ -54,23 +54,23 @@
 
                                 <!-- Botones de acciones -->
                                 <Grid Grid.Row="5" Grid.ColumnSpan="2" ColumnDefinitions="*, *, *" Padding="0, 10, 0, 0">
-                                    <!-- Dar Like -->
-                                    <Label Grid.Column="2" Text="Dar Like" HorizontalTextAlignment="Center">
-                                        <Label.GestureRecognizers>
+                                        <!-- Eliminar -->
+                                        <Label Grid.Column="2" Text="Dar like" HorizontalTextAlignment="Center">
+                                            <Label.GestureRecognizers>
                                                 <TapGestureRecognizer Command="{Binding BindingContext.DarLikeAsyncCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" 
-                                                               CommandParameter="{Binding}" />
-                                        </Label.GestureRecognizers>
-                                    </Label>
+                                                                CommandParameter="{Binding}" />
+                                            </Label.GestureRecognizers>
+                                        </Label>
 
-                                    <!-- Eliminar -->
-                                    <Label Grid.Column="0" Text="Eliminar" HorizontalTextAlignment="Center">
-                                        <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding BindingContext.EliminarUsuarioCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" 
+                                        <!-- Eliminar -->
+                                        <Label Grid.Column="0" Text="Eliminar" HorizontalTextAlignment="Center">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding BindingContext.EliminarUsuarioCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" 
                                                                CommandParameter="{Binding}" />
-                                        </Label.GestureRecognizers>
-                                    </Label>
+                                            </Label.GestureRecognizers>
+                                        </Label>
 
-                                    <!-- Editar -->
+                                        <!-- Editar -->
                                     <Label Grid.Column="1" Text="Editar" HorizontalTextAlignment="Center">
                                         <Label.GestureRecognizers>
                                             <TapGestureRecognizer Command="{Binding BindingContext.EditarUsuarioCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}" 
