@@ -37234,24 +37234,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\2DAM\\.nuget\\packages\\": {},
+    "C:\\Users\\turis\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\2DAM\\Desktop\\ProyectoTinder\\TinderApp\\TinderApp.csproj",
+      "projectUniqueName": "C:\\Users\\turis\\Desktop\\ProyectoTinder\\TinderApp\\TinderApp.csproj",
       "projectName": "TinderApp",
-      "projectPath": "C:\\Users\\2DAM\\Desktop\\ProyectoTinder\\TinderApp\\TinderApp.csproj",
-      "packagesPath": "C:\\Users\\2DAM\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\2DAM\\Desktop\\ProyectoTinder\\TinderApp\\obj\\",
+      "projectPath": "C:\\Users\\turis\\Desktop\\ProyectoTinder\\TinderApp\\TinderApp.csproj",
+      "packagesPath": "C:\\Users\\turis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\turis\\Desktop\\ProyectoTinder\\TinderApp\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\2DAM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\turis\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -37292,7 +37292,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       },
       "SdkAnalysisLevel": "9.0.100"
     },
@@ -37338,6 +37338,28 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.Android.Ref.34",
+            "version": "[34.0.145, 34.0.145]"
+          },
+          {
+            "name": "Microsoft.Android.Runtime.34.android-arm",
+            "version": "[34.0.145, 34.0.145]"
+          },
+          {
+            "name": "Microsoft.Android.Runtime.34.android-arm64",
+            "version": "[34.0.145, 34.0.145]"
+          },
+          {
+            "name": "Microsoft.Android.Runtime.34.android-x64",
+            "version": "[34.0.145, 34.0.145]"
+          },
+          {
+            "name": "Microsoft.Android.Runtime.34.android-x86",
+            "version": "[34.0.145, 34.0.145]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.Android": {
             "privateAssets": "all"
@@ -37346,7 +37368,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       },
       "net8.0-ios18.0": {
         "targetAlias": "net8.0-ios",
@@ -37389,6 +37411,16 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.iOS.Ref.net8.0_18.0",
+            "version": "[18.0.8316, 18.0.8316]"
+          },
+          {
+            "name": "Microsoft.iOS.Runtime.iossimulator-x64.net8.0_18.0",
+            "version": "[18.0.8316, 18.0.8316]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.iOS": {
             "privateAssets": "all"
@@ -37397,7 +37429,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       },
       "net8.0-maccatalyst18.0": {
         "targetAlias": "net8.0-maccatalyst",
@@ -37441,6 +37473,16 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.MacCatalyst.Ref.net8.0_18.0",
+            "version": "[18.0.8316, 18.0.8316]"
+          },
+          {
+            "name": "Microsoft.MacCatalyst.Runtime.maccatalyst-x64.net8.0_18.0",
+            "version": "[18.0.8316, 18.0.8316]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.MacCatalyst": {
             "privateAssets": "all"
@@ -37449,7 +37491,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
       },
       "net8.0-windows10.0.19041": {
         "targetAlias": "net8.0-windows10.0.19041.0",
@@ -37500,7 +37542,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

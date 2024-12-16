@@ -42,9 +42,6 @@ namespace TinderApp
 
 
 
-
-
-
             //También hay que registrar las diferentes vistas "nuevas" añadidas al programa,
             // MainPage no es una nueva, ya que es la principal de la app (por eso no se añade).
             Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));

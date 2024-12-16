@@ -32,10 +32,9 @@ namespace TinderApp.Models
             }
             else if (DeviceInfo.Platform == DevicePlatform.WinUI)
             {
-                //string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
                 // Construye la ruta absoluta desde el directorio base
-                dbpath = "C:\\Users\\2DAM\\Desktop\\ProyectoTinder\\TinderApp\\TinderDB\\TinderAPP.db";
+                dbpath = "C:\\Users\\turis\\Desktop\\ProyectoTinder\\TinderApp\\TinderDB\\TinderAPP.db";
             }
             else
             {
@@ -288,7 +287,7 @@ namespace TinderApp.Models
                 // Insertar el Match
                 var insertCommand = connection.CreateCommand();
                 insertCommand.CommandText = 
-            "INSERT INTO Match (user1_id, user2_id, fecha_match) VALUES (@id1, @id2, @fecha)";
+                    "INSERT INTO Match (user1_id, user2_id, fecha_match) VALUES (@id1, @id2, @fecha)";
                 insertCommand.Parameters.AddWithValue("@id1", match.Usuario1Id);
                 insertCommand.Parameters.AddWithValue("@id2", match.Usuario2Id);
                 insertCommand.Parameters.AddWithValue("@fecha", match.FechaMatch);
