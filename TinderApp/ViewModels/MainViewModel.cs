@@ -85,7 +85,8 @@ namespace TinderApp.ViewModels
 
             IsBusy = false;
             IsRefreshing = false;
-            listaUsuarios.Remove(this.usuarioDTOactual);
+
+
 
         }
         public void Receive(UsuarioMensaje message) //Cuando recibe el cambio del evento regarga la lista
@@ -176,8 +177,9 @@ namespace TinderApp.ViewModels
                 }
                 else{
                         // Crear un registro de Match
-                        var nuevoMatch = new Match
+                        Match nuevoMatch = new Match
                         {
+
                             Usuario1Id = usuarioActualId,
                             Usuario2Id = usuarioLikeado.User_id,
                             FechaMatch = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")

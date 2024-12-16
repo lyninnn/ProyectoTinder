@@ -39,19 +39,13 @@ namespace TinderApp.ViewModels
         [RelayCommand]
         public async Task CargarListaLikes()
         {
-            if (IsBusy)
-            {
-                return;
-            }
 
-            IsBusy = true;
-            IsRefreshing = true;
 
             try
             {
                 Console.WriteLine("Cargando likes...");
 
-                var likes = await tinderDB.VerLike(0); // Aquí se carga la lista de likes
+                var likes = await tinderDB.VerLike(); // Aquí se carga la lista de likes
                 MainThread.BeginInvokeOnMainThread(() =>
                 {
                     ListaLikes.Clear();

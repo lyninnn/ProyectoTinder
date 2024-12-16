@@ -182,7 +182,7 @@ namespace TinderApp.Models
             }
             return usuarios;
         }
-
+       
         // Like
 
         public async Task<int> InsertarLike(Like like)
@@ -218,7 +218,7 @@ namespace TinderApp.Models
 
         }
 
-        public async Task<List<Like>> VerLike(int id)
+        public async Task<List<Like>> VerLike()
         {
 
             List<Like> likes = new List<Like>();
@@ -228,8 +228,8 @@ namespace TinderApp.Models
 
                 await connection.OpenAsync();
                 var createCommand = connection.CreateCommand();
-                createCommand.CommandText = "SELECT * FROM Like where id_like = @id";
-                createCommand.Parameters.AddWithValue("@id",id);
+                createCommand.CommandText = "SELECT * FROM Like";
+   
                 using (var reader = await createCommand.ExecuteReaderAsync())
                 {
 
@@ -255,29 +255,15 @@ namespace TinderApp.Models
             {
                 await connection.OpenAsync();
 
-                // Primer comando para verificar si existe el like
+                // Corregir el paréntesis faltante
                 var command = connection.CreateCommand();
-                command.CommandText = "SELECT COUNT(*) FROM Like WHERE (user1_id = @usuarioActualId AND user2_id = @usuarioLikeadoId)";
+                command.CommandText = "SELECT COUNT(*) FROM Like WHERE ((user1_id = @usuarioActualId AND user2_id = @usuarioLikeadoId) OR (user1_id = @usuarioLikeadoId AND user2_id = @usuarioActualId))";
                 command.Parameters.AddWithValue("@usuarioActualId", usuarioActualId);
                 command.Parameters.AddWithValue("@usuarioLikeadoId", usuarioLikeadoId);
 
                 var result = await command.ExecuteScalarAsync();
-
-                // Si ya existe el like reciproco, eliminamos el like
                 if (Convert.ToInt32(result) > 0)
                 {
-                    var command2 = connection.CreateCommand();
-                    command2.CommandText = "SELECT id_like FROM Like WHERE (user1_id = @usuarioActualId AND user2_id = @usuarioLikeadoId)";
-                    command2.Parameters.AddWithValue("@usuarioActualId", usuarioActualId);
-                    command2.Parameters.AddWithValue("@usuarioLikeadoId", usuarioLikeadoId);
-
-                    var idLike = await command2.ExecuteScalarAsync();  // Aquí usamos ExecuteScalarAsync() para obtener el id_like
-
-                    if (idLike != null)
-                    {
-                        // Eliminar el like
-                        await EliminarLike(Convert.ToInt32(idLike));
-                    }
                     return true;
                 }
 
@@ -297,20 +283,12 @@ namespace TinderApp.Models
             {
                 await connection.OpenAsync();
 
-                // Reutilizar método ExisteLikeReciproco para verificar Like recíproco
-                bool existeLikeReciproco = await ExisteLikeReciproco(match.Usuario1Id, match.Usuario2Id);
-
-                if (!existeLikeReciproco)
-                {
-                    // No hay Like recíproco, no se inserta el Match
-                    return 0;
-                }
+              
 
                 // Insertar el Match
                 var insertCommand = connection.CreateCommand();
-                insertCommand.CommandText = @"
-            INSERT INTO Match (user1_id, user2_id, fecha_match) 
-            VALUES (@id1, @id2, @fecha)";
+                insertCommand.CommandText = 
+            "INSERT INTO Match (user1_id, user2_id, fecha_match) VALUES (@id1, @id2, @fecha)";
                 insertCommand.Parameters.AddWithValue("@id1", match.Usuario1Id);
                 insertCommand.Parameters.AddWithValue("@id2", match.Usuario2Id);
                 insertCommand.Parameters.AddWithValue("@fecha", match.FechaMatch);

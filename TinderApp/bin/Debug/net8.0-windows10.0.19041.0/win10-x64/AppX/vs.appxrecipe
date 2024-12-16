@@ -30,265 +30,269 @@
     <AppXManifest Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-16T17:36:22.419</Modified>
+      <Modified>2024-12-16T19:56:57.564</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-12-16T17:23:36.885</Modified>
+      <Modified>2024-12-16T18:39:07.019</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TinderApp.runtimeconfig.json">
       <PackagePath>TinderApp.runtimeconfig.json</PackagePath>
-      <Modified>2024-12-16T15:59:21.290</Modified>
+      <Modified>2024-12-16T18:37:02.963</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TinderApp.dll">
       <PackagePath>TinderApp.dll</PackagePath>
-      <Modified>2024-12-16T17:36:22.012</Modified>
+      <Modified>2024-12-16T19:56:57.205</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>TinderApp.exe</PackagePath>
-      <Modified>2024-12-16T17:36:22.028</Modified>
+      <Modified>2024-12-16T19:56:57.205</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
-      <Modified>2024-12-16T15:57:32.605</Modified>
+      <Modified>2024-12-16T18:36:32.113</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-12-16T15:57:34.687</Modified>
+      <Modified>2024-12-16T18:36:33.801</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-12-16T15:57:34.688</Modified>
+      <Modified>2024-12-16T18:36:33.801</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-12-16T15:57:34.689</Modified>
+      <Modified>2024-12-16T18:36:33.801</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-12-16T15:57:34.690</Modified>
+      <Modified>2024-12-16T18:36:33.801</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-12-16T15:57:34.690</Modified>
+      <Modified>2024-12-16T18:36:33.801</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
-      <Modified>2024-12-16T15:57:34.654</Modified>
+      <Modified>2024-12-16T18:36:33.785</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
-      <Modified>2024-12-16T15:57:34.655</Modified>
+      <Modified>2024-12-16T18:36:33.785</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-12-16T15:58:51.958</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.950</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.950</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.950</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.950</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.950</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.955</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.955</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.955</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.955</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.955</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.956</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.956</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.955</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.956</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.956</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.958</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.958</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.958</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.958</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.957</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.957</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.957</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.956</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.957</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.957</Modified>
+      <Modified>2024-12-16T18:39:02.316</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.952</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.952</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.952</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.952</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.952</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.953</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.953</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.953</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.953</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.952</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.954</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.954</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.954</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.954</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.954</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.951</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.951</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.951</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.951</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.951</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.949</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.949</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.949</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.948</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-12-16T15:58:51.948</Modified>
+      <Modified>2024-12-16T18:39:02.300</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\love.scale-100.jpg">
+      <PackagePath>love.scale-100.jpg</PackagePath>
+      <Modified>2024-12-16T18:39:02.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TinderApp.deps.json">
       <PackagePath>TinderApp.deps.json</PackagePath>
-      <Modified>2024-12-16T17:23:36.697</Modified>
+      <Modified>2024-12-16T18:37:02.838</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.54\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

@@ -12,7 +12,7 @@
                          VerticalOptions="Center">
 
         <!-- Imagen -->
-        <Image Source="love.png" HeightRequest="70" HorizontalOptions="Center" />
+        <Image Source="love.jpg" HeightRequest="70" HorizontalOptions="Center" />
 
         <!-- Título -->
         <Label Text="Bienvenido a TinderApp"

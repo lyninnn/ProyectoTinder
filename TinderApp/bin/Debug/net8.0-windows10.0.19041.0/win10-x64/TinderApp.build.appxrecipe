@@ -214,6 +214,9 @@
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\love.scale-100.jpg">
+      <PackagePath>love.scale-100.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\2DAM\Desktop\ProyectoTinder\TinderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TinderApp.deps.json">
       <PackagePath>TinderApp.deps.json</PackagePath>
     </AppxPackagedFile>
