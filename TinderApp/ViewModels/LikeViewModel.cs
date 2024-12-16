@@ -65,28 +65,28 @@ namespace TinderApp.ViewModels
             IsRefreshing = false;
         }
 
-        //[RelayCommand]
-        //public async Task CrearLike(LikeDTO likeDTO)
-        //{
-        //    if (likeDTO == null)
-        //    {
-        //        return;
-        //    }
+        [RelayCommand]
+        public async Task CrearLike(LikeDTO likeDTO)
+        {
+            if (likeDTO == null)
+            {
+                return;
+            }
 
-        //    var like = new Like
-        //    {
-        //        id_user1 = likeDTO.Id_user1,
-        //        id_user2 = likeDTO.Id_user2,
-        //        fechaLike = Convert.ToString(likeDTO.FechaLike)
-        //    };
+            var like = new Like
+            {
+                id_user1 = likeDTO.Id_user1,
+                id_user2 = likeDTO.Id_user2,
+                fechaLike = Convert.ToString(likeDTO.FechaLike)
+            };
 
-        //    int resultado = await tinderDB.InsertarLike(like);
+            int resultado = await tinderDB.InsertarLike(like);
 
-        //    if (resultado > 0)
-        //    {
-        //        await CargarListaLikes();
-        //    }
-        //}
+            if (resultado > 0)
+            {
+                await CargarListaLikes();
+            }
+        }
 
         [RelayCommand]
         public async Task EliminarLike(LikeDTO likeDTO)

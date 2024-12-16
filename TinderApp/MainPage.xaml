@@ -9,8 +9,11 @@
 
     <Grid RowDefinitions="Auto, *" RowSpacing="15" Margin="15">
 
-        <Button Grid.Row="0" Text="Nuevo Usuario" Command="{Binding CrearUsuarioCommand}"/>
-        <Button Grid.Row="0" Text="Ver matches" Command="{Binding VerMatchesCommand}"/>
+        <HorizontalStackLayout Grid.Row="0" Spacing="10" HorizontalOptions="FillAndExpand">
+            <Button Text="Nuevo Usuario" Command="{Binding CrearUsuarioCommand}" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Ver Matches" Command="{Binding VerMatchesCommand}" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Ver Likes" Command="{Binding VerLikesCommand}" HorizontalOptions="FillAndExpand"/>
+        </HorizontalStackLayout>
         <!-- RefreshView para cargar la lista de usuarios -->
         <ScrollView Grid.Row="2">
         <RefreshView Command="{Binding CargarListaUsuariosCommand}"

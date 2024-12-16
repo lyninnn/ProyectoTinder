@@ -6,65 +6,59 @@
              x:Class="TinderApp.Views.LikePage"
              Title="Likes"
              x:DataType="viewmodel:LikeViewModel">
-    
 
-        <Grid RowDefinitions="Auto, *" RowSpacing="15" Margin="15">
+    <Grid RowDefinitions="Auto, *" RowSpacing="15" Margin="15">
+        <!-- Barra de opciones -->
+        <HorizontalStackLayout Grid.Row="0" Spacing="10" HorizontalOptions="FillAndExpand">
+            <Button Text="Nuevo Like" Command="{Binding CrearLikeCommand}" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Recargar" Command="{Binding CargarListaLikesCommand}" HorizontalOptions="FillAndExpand"/>
+        </HorizontalStackLayout>
 
-        <!-- Botón para volver al menú principal -->
-        <!--<Button Grid.Row="0" Text="Volver al Inicio" Command="{Binding VolverAlInicioCommand}"/>-->
+        <!-- Lista de Likes -->
+        <ScrollView Grid.Row="1">
+            <RefreshView Command="{Binding CargarListaLikesCommand}" IsRefreshing="{Binding IsRefreshing}">
+                <CollectionView ItemsSource="{Binding ListaLikes}">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout ItemSpacing="5" Orientation="Vertical"/>
+                    </CollectionView.ItemsLayout>
 
-        <!-- RefreshView para cargar la lista de likes -->
-        <RefreshView Grid.Row="1"
-                     Command="{Binding CargarListaLikesCommand}"
-                     IsRefreshing="{Binding IsRefreshing}">
-            <CollectionView ItemsSource="{Binding ListaLikes}">
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout ItemSpacing="10" Orientation="Vertical"/>
-                </CollectionView.ItemsLayout>
+                    <!-- Plantilla para cada Like -->
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:LikeDTO">
+                            <Border Padding="10, 5" HorizontalOptions="FillAndExpand">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="5"/>
+                                </Border.StrokeShape>
 
-                <!-- Plantilla para cada like -->
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="model:LikeDTO">
-                        <Border Padding="10" HorizontalOptions="FillAndExpand">
-                            <Border.StrokeShape>
-                                <RoundRectangle CornerRadius="5"/>
-                            </Border.StrokeShape>
+                                <Grid RowDefinitions="Auto, Auto, Auto"
+                                      ColumnDefinitions="*, Auto">
 
-                            <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, *">
+                                    <!-- Información del Like -->
+                                    <Label Grid.Row="0" Grid.Column="0" Text="Usuario 1:" FontAttributes="Bold"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Id_user1}"/>
 
-                                <!-- Nombre del usuario que dio like -->
-                                <Label Grid.Row="0" Grid.Column="0" Text="De:" FontAttributes="Bold"/>
-                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Id_user1}"/>
+                                    <Label Grid.Row="1" Grid.Column="0" Text="Usuario 2:" FontAttributes="Bold"/>
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding Id_user2}"/>
 
-                                <!-- Nombre del usuario que recibió el like -->
-                                <Label Grid.Row="1" Grid.Column="0" Text="A:" FontAttributes="Bold"/>
-                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding Id_user2}"/>
+                                    <Label Grid.Row="2" Grid.Column="0" Text="Fecha:" FontAttributes="Bold"/>
+                                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding FechaLike, StringFormat='{0:dd/MM/yyyy}'}"/>
 
-                                <!-- Fecha del like -->
-                                <Label Grid.Row="2" Grid.Column="0" Text="Fecha:" FontAttributes="Bold"/>
-                                <Label Grid.Row="2" Grid.Column="1" Text="{Binding FechaLike}"/>
-
-                                <!-- Botones de acciones -->
-                                <Grid Grid.Row="3" Grid.ColumnSpan="2" ColumnDefinitions="*, *">
-
-                    
-
-                                    <!-- Eliminar Like -->
-                                    <Label Grid.Column="1" Text="Eliminar" HorizontalTextAlignment="Center">
-                                        <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Command="{Binding BindingContext.EliminarLikeCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}"
-                                                                  CommandParameter="{Binding}"/>
-                                        </Label.GestureRecognizers>
-                                    </Label>
+                                    <!-- Acciones -->
+                                    <Grid Grid.Row="3" Grid.ColumnSpan="2" ColumnDefinitions="*, *" Padding="0, 10, 0, 0">
+                                        <!-- Botón Eliminar -->
+                                        <Label Grid.Column="0" Text="Eliminar" HorizontalTextAlignment="Center">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding BindingContext.EliminarLikeCommand, Source={x:RelativeSource AncestorType={x:Type ContentPage}}}"
+                                                                      CommandParameter="{Binding}" />
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                    </Grid>
                                 </Grid>
-
-                            </Grid>
-                        </Border>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </RefreshView>
-
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+        </ScrollView>
     </Grid>
-
 </ContentPage>

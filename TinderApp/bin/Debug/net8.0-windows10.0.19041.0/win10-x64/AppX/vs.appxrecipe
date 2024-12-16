@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\turis\Desktop\ProyectoTinder\TinderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-15T16:42:44.824</Modified>
+      <Modified>2024-12-16T14:11:01.409</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\turis\Desktop\ProyectoTinder\TinderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-12-15T16:42:44.675</Modified>
+      <Modified>2024-12-16T13:57:29.188</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\turis\Desktop\ProyectoTinder\TinderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TinderApp.runtimeconfig.json">
       <PackagePath>TinderApp.runtimeconfig.json</PackagePath>
@@ -44,11 +44,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\turis\Desktop\ProyectoTinder\TinderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TinderApp.dll">
       <PackagePath>TinderApp.dll</PackagePath>
-      <Modified>2024-12-15T16:42:43.595</Modified>
+      <Modified>2024-12-16T14:11:01.131</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\turis\Desktop\ProyectoTinder\TinderApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>TinderApp.exe</PackagePath>
-      <Modified>2024-12-15T16:42:43.635</Modified>
+      <Modified>2024-12-16T14:11:01.136</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\turis\Desktop\ProyectoTinder\TinderApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -288,7 +288,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\turis\Desktop\ProyectoTinder\TinderApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\TinderApp.deps.json">
       <PackagePath>TinderApp.deps.json</PackagePath>
-      <Modified>2024-12-15T16:42:44.506</Modified>
+      <Modified>2024-12-16T13:57:28.934</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\turis\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.54\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

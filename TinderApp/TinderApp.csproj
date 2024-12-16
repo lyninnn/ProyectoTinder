@@ -65,12 +65,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\LikePage.xaml.cs">
-	    <DependentUpon>LikePage.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="Views\LikePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

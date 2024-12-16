@@ -209,7 +209,7 @@ namespace TinderApp.ViewModels
         }
 
         [RelayCommand]
-        public async Task VerLikes()
+        private async Task VerLikes()
         {
             await Shell.Current.GoToAsync("LikePage");
         }
