@@ -7,6 +7,6 @@ public partial class LikePage : ContentPage
 	public LikePage(LikeViewModel likeViewModel)
 	{
 		InitializeComponent();
-		BindingContext= likeViewModel;	
+		BindingContext = likeViewModel;	
 	}
 }

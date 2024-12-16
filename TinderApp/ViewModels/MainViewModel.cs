@@ -39,6 +39,11 @@ namespace TinderApp.ViewModels
             listaUsuarios = new ObservableCollection<UsuarioDTO>();
             _ = CargarListaUsuarios();
             WeakReferenceMessenger.Default.Register<UsuarioMensaje>(this);
+            if (Session.UsuarioActual != null)
+            {
+                usuarioDTOactual = Session.UsuarioActual;
+            }
+          
 
         }
 
@@ -80,6 +85,7 @@ namespace TinderApp.ViewModels
 
             IsBusy = false;
             IsRefreshing = false;
+            listaUsuarios.Remove(this.usuarioDTOactual);
 
         }
         public void Receive(UsuarioMensaje message) //Cuando recibe el cambio del evento regarga la lista
@@ -130,7 +136,7 @@ namespace TinderApp.ViewModels
 
 
         [RelayCommand]
-        public async Task DarLikeAsync(UsuarioDTO usuarioLikeado)
+        public async Task DarLike(UsuarioDTO usuarioLikeado)
         {
             if (usuarioLikeado == null)
             {
@@ -138,38 +144,37 @@ namespace TinderApp.ViewModels
                 return;
             }
 
+            if (UsuarioDTOactual == null)
+            {
+                await Shell.Current.DisplayAlert("Error", "El usuario actual no está definido.", "OK");
+                return;
+            }
+
             try
             {
-                int usuarioActualId = UsuarioDTOactual.User_id; // ID del usuario actual, asegúrate de que esté inicializado correctamente.
+                int usuarioActualId = UsuarioDTOactual.User_id; // ID del usuario actual, ahora seguro que no es null
 
                 // Verificar si ya se dio un like previamente
                 bool likePrevio = await tinderDB.ExisteLikeReciproco(usuarioActualId, usuarioLikeado.User_id);
-                if (likePrevio)
+                if (!likePrevio)
                 {
                     await Shell.Current.DisplayAlert(
                         "Like ya enviado",
                         $"Ya has dado like a {usuarioLikeado.Nombre}.",
                         "OK"
                     );
+                    ListaUsuarios.Remove(usuarioLikeado);
+                        var nuevoLike = new Like
+                        {
+                            id_user1 = usuarioActualId,
+                            id_user2 = usuarioLikeado.User_id,
+                            fechaLike = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+                        };
+
+                        await tinderDB.InsertarLike(nuevoLike);
                     return;
                 }
-
-                // Crear el "like" en la base de datos
-                var nuevoLike = new Like
-                {
-                    id_user1 = usuarioActualId,
-                    id_user2 = usuarioLikeado.User_id,
-                    fechaLike = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
-                };
-
-                int resultadoLike = await tinderDB.InsertarLike(nuevoLike);
-
-                if (resultadoLike > 0)
-                {
-                    // Verificar si hay un match mutuo
-                    bool esMatch = await tinderDB.ExisteLikeReciproco(usuarioLikeado.User_id, usuarioActualId);
-                    if (esMatch)
-                    {
+                else{
                         // Crear un registro de Match
                         var nuevoMatch = new Match
                         {
@@ -184,29 +189,14 @@ namespace TinderApp.ViewModels
                             $"¡Tienes un match con {usuarioLikeado.Nombre}! Ahora pueden comenzar a chatear.",
                             "OK"
                         );
-
-                        // Opcional: Remueve al usuario de la lista, si es necesario
+                    }
                         MainThread.BeginInvokeOnMainThread(() => ListaUsuarios.Remove(usuarioLikeado));
-                    }
-                    else
-                    {
-                        await Shell.Current.DisplayAlert(
-                            "¡Like enviado!",
-                            $"Has dado like a {usuarioLikeado.Nombre}.",
-                            "OK"
-                        );
-                    }
-                }
-                else
-                {
-                    await Shell.Current.DisplayAlert("Error", "No se pudo registrar el like. Intenta nuevamente.", "OK");
-                }
-            }
-            catch (Exception ex)
+                    }catch (Exception ex)
             {
                 await Shell.Current.DisplayAlert("Error", $"Hubo un problema al dar like: {ex.Message}", "OK");
             }
         }
+
 
         [RelayCommand]
         private async Task VerLikes()

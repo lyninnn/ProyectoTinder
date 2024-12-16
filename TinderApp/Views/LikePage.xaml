@@ -15,7 +15,8 @@
         </HorizontalStackLayout>
 
         <!-- Lista de Likes -->
-        <ScrollView Grid.Row="1">
+        <ScrollView Grid.Row="2">
+
             <RefreshView Command="{Binding CargarListaLikesCommand}" IsRefreshing="{Binding IsRefreshing}">
                 <CollectionView ItemsSource="{Binding ListaLikes}">
                     <CollectionView.ItemsLayout>

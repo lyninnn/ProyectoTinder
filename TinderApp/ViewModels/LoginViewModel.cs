@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using TinderApp.Models;
 using TinderApp.Views;
+using TinderApp.Utilidades;
+using TinderApp.DTOs;
 namespace TinderApp.ViewModels
 {
     public partial class LoginViewModel : ObservableObject
@@ -32,7 +34,6 @@ namespace TinderApp.ViewModels
         {
             if (string.IsNullOrWhiteSpace(Nombre) || string.IsNullOrWhiteSpace(Contraseña))
             {
-                // Validación básica: asegurarse de que ambos campos no estén vacíos.
                 await Shell.Current.DisplayAlert("Error", "Por favor ingresa nombre y contraseña.", "OK");
                 return;
             }
@@ -44,23 +45,35 @@ namespace TinderApp.ViewModels
 
                 if (user != null)
                 {
-                  
+                    // Asignar el usuario actual a la sesión
+                    Session.UsuarioActual =
+                    new UsuarioDTO
+                    {
+                        User_id = user.UsuarioId,
+                        Nombre = user.Nombre,
+                        Genero = user.Genero,
+                        Edad = user.Edad,
+                        Ubicacion = user.Ubicacion,
+                        Preferencias = user.Preferencias,
+                        Foto = user.Foto,
+                        Contraseña = user.Contraseña
+                    };
 
-                    // Navegar a la página de usuario (o la página principal)
+
+                    // Navegar a la página principal
                     await Shell.Current.GoToAsync("MainPage");
                 }
                 else
                 {
-                    // Si no se encuentra el usuario
                     await Shell.Current.DisplayAlert("Error", "Usuario o contraseña incorrectos.", "OK");
                 }
             }
             catch (Exception ex)
             {
-                // Manejo de excepciones: captura cualquier error y muestra un mensaje al usuario
                 await Shell.Current.DisplayAlert("Error", $"Hubo un problema al iniciar sesión: {ex.Message}", "OK");
             }
         }
+    
 
         [RelayCommand]
         private async Task Registrar()

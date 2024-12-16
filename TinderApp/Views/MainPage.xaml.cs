@@ -1,4 +1,4 @@
-﻿using TinderApp.ViewModels;
+using TinderApp.ViewModels;
 
 namespace TinderApp
 {
@@ -8,7 +8,7 @@ namespace TinderApp
         public MainPage(MainViewModel mainviewModel)
         {
             InitializeComponent();
-            BindingContext=mainviewModel;
+            BindingContext = mainviewModel;
         }
 
     }

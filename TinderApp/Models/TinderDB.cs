@@ -6,7 +6,6 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.Data.Sqlite;
 using TinderApp.DTOs;
-using Windows.UI;
 
 namespace TinderApp.Models
 {
@@ -36,7 +35,7 @@ namespace TinderApp.Models
                 //string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
                 // Construye la ruta absoluta desde el directorio base
-                dbpath = "C:\\Users\\turis\\Desktop\\ProyectoTinder\\TinderApp\\TinderDB\\TinderAPP.db";
+                dbpath = "C:\\Users\\2DAM\\Desktop\\ProyectoTinder\\TinderApp\\TinderDB\\TinderAPP.db";
             }
             else
             {
@@ -211,7 +210,7 @@ namespace TinderApp.Models
 
                 await connection.OpenAsync();
                 var deleteCommand = connection.CreateCommand();
-                deleteCommand.CommandText = @"DELETE FROM like where id_like = @id)";
+                deleteCommand.CommandText = @"DELETE FROM like where id_like = @id";
                 deleteCommand.Parameters.AddWithValue("@id", id);
                 await deleteCommand.ExecuteNonQueryAsync();
 
@@ -255,18 +254,37 @@ namespace TinderApp.Models
             using (var connection = new SqliteConnection(cadenaConexion))
             {
                 await connection.OpenAsync();
+
+                // Primer comando para verificar si existe el like
                 var command = connection.CreateCommand();
-                command.CommandText = @"
-            SELECT COUNT(*) 
-            FROM Like 
-            WHERE (user1_id = @usuarioLikeadoId AND user2_id = @usuarioActualId)";
-                command.Parameters.AddWithValue("@usuarioLikeadoId", usuarioLikeadoId);
+                command.CommandText = "SELECT COUNT(*) FROM Like WHERE (user1_id = @usuarioActualId AND user2_id = @usuarioLikeadoId)";
                 command.Parameters.AddWithValue("@usuarioActualId", usuarioActualId);
+                command.Parameters.AddWithValue("@usuarioLikeadoId", usuarioLikeadoId);
 
                 var result = await command.ExecuteScalarAsync();
-                return Convert.ToInt32(result) > 0;
+
+                // Si ya existe el like reciproco, eliminamos el like
+                if (Convert.ToInt32(result) > 0)
+                {
+                    var command2 = connection.CreateCommand();
+                    command2.CommandText = "SELECT id_like FROM Like WHERE (user1_id = @usuarioActualId AND user2_id = @usuarioLikeadoId)";
+                    command2.Parameters.AddWithValue("@usuarioActualId", usuarioActualId);
+                    command2.Parameters.AddWithValue("@usuarioLikeadoId", usuarioLikeadoId);
+
+                    var idLike = await command2.ExecuteScalarAsync();  // Aquí usamos ExecuteScalarAsync() para obtener el id_like
+
+                    if (idLike != null)
+                    {
+                        // Eliminar el like
+                        await EliminarLike(Convert.ToInt32(idLike));
+                    }
+                    return true;
+                }
+
+                return false;
             }
         }
+
 
 
 

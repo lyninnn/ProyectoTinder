@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using TinderApp.DTOs;
@@ -8,7 +9,7 @@ using TinderApp.Utilidades;
 
 namespace TinderApp.ViewModels
 {
-    public partial class LikeViewModel : ObservableObject
+    public partial class LikeViewModel : ObservableObject, IRecipient<LikeMensaje>
     {
         private readonly TinderDB tinderDB;
 
@@ -27,9 +28,10 @@ namespace TinderApp.ViewModels
         public LikeViewModel(TinderDB tinderDB)
         {
             this.tinderDB = tinderDB;
-            listaLikes = new ObservableCollection<LikeDTO>();
+            ListaLikes = new ObservableCollection<LikeDTO>();
             isRefreshing = false;
             _ = CargarListaLikes();
+            WeakReferenceMessenger.Default.Register<LikeMensaje>(this);
         }
 
         /* LIKES */
@@ -45,25 +47,40 @@ namespace TinderApp.ViewModels
             IsBusy = true;
             IsRefreshing = true;
 
-            var likes = await tinderDB.VerLike(0); // Cambiar "0" si quieres filtrar por usuario o ID específico
-            MainThread.BeginInvokeOnMainThread(() =>
+            try
             {
-                ListaLikes.Clear();
-                foreach (var like in likes)
-                {
-                    ListaLikes.Add(new LikeDTO
-                    {
-                        Id_like = like.id_like,
-                        Id_user1 = like.id_user1,
-                        id_user2 = like.id_user2,
-                        FechaLike = Convert.ToDateTime(like.fechaLike)
-                    });
-                }
-            });
+                Console.WriteLine("Cargando likes...");
 
-            IsBusy = false;
-            IsRefreshing = false;
+                var likes = await tinderDB.VerLike(0); // Aquí se carga la lista de likes
+                MainThread.BeginInvokeOnMainThread(() =>
+                {
+                    ListaLikes.Clear();
+                    foreach (var like in likes)
+                    {
+                        ListaLikes.Add(new LikeDTO
+                        {
+                            Id_like = like.id_like,
+                            Id_user1 = like.id_user1,
+                            Id_user2 = like.id_user2,
+                            FechaLike = Convert.ToDateTime(like.fechaLike)
+                        });
+                    }
+                });
+
+                Console.WriteLine("Likes cargados con éxito.");
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", $"Error al cargar los likes: {ex.Message}", "OK");
+                Console.WriteLine($"Error al cargar likes: {ex.Message}");
+            }
+            finally
+            {
+                IsBusy = false;
+                IsRefreshing = false;
+            }
         }
+
 
         [RelayCommand]
         public async Task CrearLike(LikeDTO likeDTO)
@@ -105,6 +122,10 @@ namespace TinderApp.ViewModels
             }
         }
 
+        public void Receive(LikeMensaje message)
+        {
+            MainThread.BeginInvokeOnMainThread(async () => await CargarListaLikes());
+        }
     }
 }
 
